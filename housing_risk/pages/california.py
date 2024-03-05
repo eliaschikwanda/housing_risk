@@ -6,7 +6,7 @@ import reflex as rx
 
 
 @template(route="/california", title="California", image="/flag_california.webp")
-def settings() -> rx.Component:
+def california() -> rx.Component:
     """The California page.
 
     Returns:

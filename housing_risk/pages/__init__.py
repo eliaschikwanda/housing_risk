@@ -1,4 +1,4 @@
-from .dashboard import dashboard
 from .index import index
-from .settings import settings
+from .arizona import arizona
+from .california import california
 from .oregon import oregon

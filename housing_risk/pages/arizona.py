@@ -5,7 +5,7 @@ import reflex as rx
 
 
 @template(route="/arizona", title="Arizona", image="/marizona.gif")
-def dashboard() -> rx.Component:
+def arizona() -> rx.Component:
     """The dashboard page.
 
     Returns:
