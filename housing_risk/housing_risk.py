@@ -1,4 +1,4 @@
-"""Welcome to Reflex!."""
+"""Welcome to housing_risk!."""
 
 from housing_risk import styles
 

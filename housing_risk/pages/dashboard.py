@@ -4,7 +4,7 @@ from housing_risk.templates import template
 import reflex as rx
 
 
-@template(route="/dashboard", title="Dashboard")
+@template(route="/arizona", title="Arizona", image="/marizona.gif")
 def dashboard() -> rx.Component:
     """The dashboard page.
 
@@ -12,7 +12,7 @@ def dashboard() -> rx.Component:
         The UI for the dashboard page.
     """
     return rx.chakra.vstack(
-        rx.chakra.heading("Dashboard", font_size="3em"),
+        rx.chakra.heading("Arizona", font_size="3em"),
         rx.chakra.text("Welcome to Reflex!"),
         rx.chakra.text(
             "You can edit this page in ",

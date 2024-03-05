@@ -14,15 +14,16 @@ def sidebar_header() -> rx.Component:
     return rx.chakra.hstack(
         # The logo.
         rx.chakra.image(
-            src="/icon.svg",
-            height="2em",
+            src="/home_page_image.png",
+            height="3em",
+            border_radius="3rem",
         ),
         rx.chakra.spacer(),
         # Link to Reflex GitHub repo.
         rx.chakra.link(
             rx.chakra.center(
                 rx.chakra.image(
-                    src="/github.svg",
+                    src="/earth.jpeg",
                     height="3em",
                     padding="0.5em",
                 ),
@@ -33,7 +34,7 @@ def sidebar_header() -> rx.Component:
                     "bg": styles.accent_color,
                 },
             ),
-            href="https://github.com/reflex-dev/reflex",
+            href="/",
         ),
         width="100%",
         border_bottom=styles.border,

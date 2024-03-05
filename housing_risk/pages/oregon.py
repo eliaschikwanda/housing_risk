@@ -1,13 +1,11 @@
-"""The California page."""
+"""The Oregon page."""
 
 from housing_risk.templates import template
-
 import reflex as rx
 
-
-@template(route="/california", title="California", image="/flag_california.webp")
-def settings() -> rx.Component:
-    """The California page.
+@template(route="/oregon", title="Oregon", image="/flag_oregon.png")
+def oregon() -> rx.Component:
+    """The Oregon page.
 
     Returns:
         The UI for the settings page.
@@ -17,6 +15,5 @@ def settings() -> rx.Component:
         rx.chakra.text("Welcome to Reflex!"),
         rx.chakra.text(
             "You can edit this page in ",
-            rx.chakra.code("{your_app}/pages/settings.py"),
-        ),
+        )
     )
