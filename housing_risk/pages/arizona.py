@@ -1,10 +1,14 @@
-"""The dashboard page."""
+"""The Arizona page."""
 from housing_risk.templates import template
 
 import reflex as rx
 
+arizona_counties = [
+    "Apache", "Cochise", "Coconino", "Gila", "Graham", "Greenlee", "La Paz",
+    "Maricopa", "Mohave", "Navajo", "Pima", "Pinal", "Santa Cruz", "Yavapai", "Yuma"
+]
 
-@template(route="/arizona", title="Arizona", image="/marizona.gif")
+@template(route="/arizona", title="Arizona", image="/flag_arizona.png")
 def arizona() -> rx.Component:
     """The dashboard page.
 
@@ -12,10 +16,15 @@ def arizona() -> rx.Component:
         The UI for the dashboard page.
     """
     return rx.chakra.vstack(
-        rx.chakra.heading("Arizona", font_size="3em"),
-        rx.chakra.text("Welcome to Reflex!"),
-        rx.chakra.text(
-            "You can edit this page in ",
-            rx.chakra.code("{your_app}/pages/dashboard.py"),
+        rx.chakra.heading("Arizona", font_size="4em"),
+        rx.divider(),
+        rx.chakra.vstack(
+            *[
+                rx.chakra.box(
+                    rx.chakra.text(county),
+                    font_size="1.5em",
+                )
+                for county in arizona_counties
+            ],
         ),
     )

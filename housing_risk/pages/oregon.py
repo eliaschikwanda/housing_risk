@@ -3,6 +3,15 @@
 from housing_risk.templates import template
 import reflex as rx
 
+oregon_counties = [
+    "Baker", "Benton", "Clackamas", "Clatsop", "Columbia", "Coos", "Crook", 
+    "Curry", "Deschutes", "Douglas", "Gilliam", "Grant", "Harney", "Hood River", 
+    "Jackson", "Jefferson", "Josephine", "Klamath", "Lake", "Lane", "Lincoln", 
+    "Linn", "Malheur", "Marion", "Morrow", "Multnomah", "Polk", "Sherman", 
+    "Tillamook", "Umatilla", "Union", "Wallowa", "Wasco", "Washington", "Wheeler", 
+    "Yamhill"
+]
+
 @template(route="/oregon", title="Oregon", image="/flag_oregon.png")
 def oregon() -> rx.Component:
     """The Oregon page.
@@ -11,9 +20,15 @@ def oregon() -> rx.Component:
         The UI for the settings page.
     """
     return rx.chakra.vstack(
-        rx.chakra.heading("California", font_size="3em"),
-        rx.chakra.text("Welcome to Reflex!"),
-        rx.chakra.text(
-            "You can edit this page in ",
-        )
+        rx.chakra.heading("Oregon", font_size="4em"),
+        rx.divider(),
+        rx.chakra.vstack(
+            *[
+                rx.chakra.box(
+                    rx.chakra.text(county),
+                    font_size="1.5em",
+                )
+                for county in oregon_counties
+            ],
+        ),
     )
